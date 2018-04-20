@@ -14,7 +14,7 @@
 	
 
 	<% if current_user %> 
-	hello user#<%= current_user %>
+	hello <%= current_user.email %>
 		<p><%= link_to 'log out', sessions_path, method: :delete %></p> 
 	
 	<% else %> 

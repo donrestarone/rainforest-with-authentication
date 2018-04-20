@@ -6,7 +6,10 @@ class ApplicationController < ActionController::Base
 private
 
   	def current_user 
-		session[:user_id]
+		user_id = session[:user_id]
+
+		#makes sure if user_id exists. 
+		user_id && User.find(user_id)
 	end 
-	
+
 end
